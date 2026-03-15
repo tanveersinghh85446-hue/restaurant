@@ -1,29 +1,49 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Rooms from "./Pages/Rooms";
-import GalleryPage from "./Pages/GalleryPage";
-import Contact from "./Pages/Contact";
+import { useState } from "react";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import HomePage from "./Pages/HomePage";
+import MenuPage from "./Pages/Menupage";
+import OrderOnlinePage from "./Pages/Orderonlinepage";
+import TableReservationPage from "./pages/TableReservationPage";
+import AboutUsPage from "./pages/AboutUsPage";
+import ReviewsPage from "./pages/ReviewsPage";
+import ContactPage from "./pages/ContactPage";
+import GalleryPage from "./pages/GalleryPage";
 
 export default function App() {
+  const [activePage, setActivePage] = useState("home");
+  const [cart, setCart] = useState([]);
+
+  const addToCart = (item) => {
+    setCart((prev) => {
+      const existing = prev.find((i) => i.id === item.id);
+      if (existing) return prev.map((i) => i.id === item.id ? { ...i, qty: i.qty + 1 } : i);
+      return [...prev, { ...item, qty: 1 }];
+    });
+  };
+
+  const removeFromCart = (id) => setCart((prev) => prev.filter((i) => i.id !== id));
+  const updateQty = (id, qty) => {
+    if (qty < 1) return removeFromCart(id);
+    setCart((prev) => prev.map((i) => i.id === id ? { ...i, qty } : i));
+  };
+
+  const pages = {
+    home: <HomePage setActivePage={setActivePage} addToCart={addToCart} />,
+    menu: <MenuPage addToCart={addToCart} />,
+    order: <OrderOnlinePage cart={cart} removeFromCart={removeFromCart} updateQty={updateQty} />,
+    reservation: <TableReservationPage />,
+    about: <AboutUsPage />,
+    reviews: <ReviewsPage />,
+    contact: <ContactPage />,
+    gallery: <GalleryPage />,
+  };
+
   return (
-    <BrowserRouter>
-
-      <Routes>
-
-        <Route path="/" element={<Home />} />
-
-        <Route path="/about" element={<About />} />
-
-        <Route path="/rooms" element={<Rooms />} />
-
-        <Route path="/gallery" element={<GalleryPage />} />
-
-        <Route path="/contact" element={<Contact />} />
-
-      </Routes>
-
-    </BrowserRouter>
+    <div className="min-h-screen bg-[#0e0e0e] text-white font-['Cormorant_Garamond',serif]">
+      <Navbar activePage={activePage} setActivePage={setActivePage} cartCount={cart.reduce((a, i) => a + i.qty, 0)} />
+      <main>{pages[activePage]}</main>
+      <Footer setActivePage={setActivePage} />
+    </div>
   );
 }
