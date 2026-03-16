@@ -1,5 +1,5 @@
 import DishCard from "../Components/Dishcard";
-import { dishes } from "../Data/Dishes";
+import {dishes} from "../Data/dishes"
 import { FaCircle, FaUtensils } from "react-icons/fa";
 import { MdDeliveryDining, MdMenuBook, MdStar, MdPhoneIphone, MdTableRestaurant } from "react-icons/md";
 import { GiMeat, GiCupcake, GiWineBottle } from "react-icons/gi";
