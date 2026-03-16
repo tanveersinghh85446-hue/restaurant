@@ -4,7 +4,7 @@ import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
 import MenuPage from "./Pages/Menupage";
 import OrderOnlinePage from "./Pages/Orderonlinepage";
-import TableReservationPage from "./Pages/TablereservationPage";
+import Tablereservationpage from "./Pages/Tablereservationpage"
 import AboutUsPage from "./Pages/AboutUsPage";
 import ReviewsPage from "./Pages/ReviewsPage";
 import ContactPage from "./Pages/ContactPage";
@@ -32,7 +32,7 @@ export default function App() {
     home: <HomePage setActivePage={setActivePage} addToCart={addToCart} />,
     menu: <MenuPage addToCart={addToCart} />,
     order: <OrderOnlinePage cart={cart} removeFromCart={removeFromCart} updateQty={updateQty} />,
-    reservation: <TableReservationPage />,
+    reservation: <Tablereservationpage />,
     about: <AboutUsPage />,
     reviews: <ReviewsPage />,
     contact: <ContactPage />,
