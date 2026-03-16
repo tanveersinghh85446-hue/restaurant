@@ -32,7 +32,7 @@ export default function Footer({ setActivePage }) {
           <div>
             <h4 className="text-white font-['Playfair_Display',serif] text-lg mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {[["home","Home"],["menu","Menu"],["about","About Us"],["gallery","Gallery"]].map(([id, label]) => (
+              {[["home", "Home"], ["menu", "Menu"], ["about", "About Us"], ["gallery", "Gallery"]].map(([id, label]) => (
                 <li key={id}>
                   <button onClick={() => setActivePage(id)}
                     className="text-gray-500 hover:text-blue-400 text-sm transition-colors">
@@ -47,7 +47,7 @@ export default function Footer({ setActivePage }) {
           <div>
             <h4 className="text-white font-['Playfair_Display',serif] text-lg mb-4">Services</h4>
             <ul className="space-y-2">
-              {[["order","Online Order"],["reservation","Table Booking"],["reviews","Reviews"],["contact","Contact"]].map(([id, label]) => (
+              {[["order", "Online Order"], ["reservation", "Table Booking"], ["reviews", "Reviews"], ["contact", "Contact"]].map(([id, label]) => (
                 <li key={id}>
                   <button onClick={() => setActivePage(id)}
                     className="text-gray-500 hover:text-blue-400 text-sm transition-colors">
@@ -60,22 +60,24 @@ export default function Footer({ setActivePage }) {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-['Playfair_Display',serif] text-lg mb-4">Contact</h4>
+            <h4 className="text-white font-['Playfair_Display',serif] text-lg mb-4">
+              Contact
+            </h4>
+
             <ul className="space-y-3 text-sm text-gray-500">
               <li className="flex gap-2">
-                <img src="/icons/location.png" alt="Location" className="w-5 h-5 object-contain" />
-                103 Restaurant St, Eng, 2-203-23226
+                Madhu Vihar New Delhi (Dwarka)
               </li>
+
               <li className="flex gap-2">
-                <img src="/icons/phone.png" alt="Phone" className="w-5 h-5 object-contain" />
-                (723) 455-7920
+                +91 9319376656
               </li>
+
               <li className="flex gap-2">
-                <img src="/icons/email.png" alt="Email" className="w-5 h-5 object-contain" />
-                info@restora.com
+                add@yourgmail.com
               </li>
+
               <li className="flex gap-2">
-                <img src="/icons/clock.png" alt="Hours" className="w-5 h-5 object-contain" />
                 Mon–Sat: 10:00 AM – 10:00 PM
               </li>
             </ul>

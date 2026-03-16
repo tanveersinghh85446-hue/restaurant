@@ -3,7 +3,7 @@ export const dishes = [
 
   { id: 2, name: "Beef Tenderloin", price: "32.99", category: "Main Course", img: "Beef Tenderloin.jpg", badge: "Bestseller", description: "Prime cut, truffle jus, roasted garlic mash, crispy asparagus." },
 
-  { id: 3, name: "Truffle Risotto", price: "22.99", category: "Main Course", img: "", description: "Arborio rice, black truffle shavings, parmesan, fresh herbs." },
+  { id: 3, name: "Truffle Risotto", price: "22.99", category: "Main Course", img: "Truffle Risotto.jpg", description: "Arborio rice, black truffle shavings, parmesan, fresh herbs." },
 
   { id: 4, name: "Bruschetta", price: "9.99", category: "Starters", img: "Bruschetta.jpg", description: "Toasted sourdough, heirloom tomatoes, fresh basil, aged balsamic." },
 

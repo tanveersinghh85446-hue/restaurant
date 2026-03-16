@@ -1,7 +1,7 @@
 const chefs = [
-  { name: "Chef Marco Rossi", role: "Executive Chef", img: "/images/chef-marco.jpg", specialty: "Italian & Mediterranean" },
-  { name: "Chef Yuki Tanaka", role: "Pastry Chef", img: "/images/chef-yuki.jpg", specialty: "French Pastry & Desserts" },
-  { name: "Chef Amir Patel", role: "Sous Chef", img: "/images/chef-amir.jpg", specialty: "South Asian Fusion" },
+  { name: "Chef Marco Rossi", role: "Executive Chef", img: "Executive Chef.jpg", specialty: "Italian & Mediterranean" },
+  { name: "Chef Yuki Tanaka", role: "Pastry Chef", img: "Pastry Chef.jpg", specialty: "French Pastry & Desserts" },
+  { name: "Chef Amir Patel", role: "Sous Chef", img: "Sous Chef.jpg", specialty: "South Asian Fusion" },
 ];
 
 export default function AboutUsPage() {
@@ -26,7 +26,7 @@ export default function AboutUsPage() {
               <p>We partner with local farms and artisan producers to ensure the freshest, most sustainable ingredients. From the first bite to the last, we want every visit to feel like coming home.</p>
             </div>
             <div className="grid grid-cols-3 gap-6 mt-10 pt-8 border-t border-blue-900/20">
-              {[["10+","Years Open"],["3","Expert Chefs"],["4.9★","Avg Rating"]].map(([num, label]) => (
+              {[["10+", "Years Open"], ["3", "Expert Chefs"], ["4.9★", "Avg Rating"]].map(([num, label]) => (
                 <div key={label} className="text-center">
                   <div className="text-2xl font-['Playfair_Display',serif] font-bold text-blue-400">{num}</div>
                   <div className="text-xs text-gray-500 mt-1">{label}</div>
@@ -36,10 +36,10 @@ export default function AboutUsPage() {
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { src: "/images/about-dining.jpg", alt: "Dining" },
-              { src: "/images/about-fresh.jpg", alt: "Fresh Ingredients" },
-              { src: "/images/about-kitchen.jpg", alt: "Kitchen" },
-              { src: "/images/about-drinks.jpg", alt: "Drinks" },
+              { src: "Dining Chair.jpg", alt: "Dining" },
+              { src: "Fresh Ingredients.jpg", alt: "Fresh Ingredients" },
+              { src: "Kitchen.jpg", alt: "Kitchen" },
+              { src: "Drinks.jpg", alt: "Drinks" },
             ].map((img, i) => (
               <div key={i} className="bg-linear-to-br from-blue-900/30 to-blue-800/10 border border-blue-900/20 rounded-2xl overflow-hidden aspect-square">
                 <img src={img.src} alt={img.alt} className="w-full h-full object-cover" />
@@ -53,13 +53,13 @@ export default function AboutUsPage() {
           <h2 className="font-['Playfair_Display',serif] text-3xl font-bold text-white text-center mb-10">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { img: "/icons/farm.png", title: "Farm to Table", desc: "We source exclusively from local, organic farms and trusted artisan producers." },
-              { img: "/icons/heart.png", title: "Made with Love", desc: "Every dish is prepared with care, intention, and decades of culinary passion." },
-              { img: "/icons/earth.png", title: "Sustainability", desc: "Our practices minimize waste and support the communities around us." },
+              { img: "Farm to Table.jpg", title: "Farm to Table", desc: "We source exclusively from local, organic farms and trusted artisan producers." },
+              { img: "Made with Love.jpg", title: "Made with Love", desc: "Every dish is prepared with care, intention, and decades of culinary passion." },
+              { img: "Sustainability.jpg", title: "Sustainability", desc: "Our practices minimize waste and support the communities around us." },
             ].map((v) => (
               <div key={v.title} className="bg-[#050d1f] border border-blue-900/20 rounded-xl p-6 text-center hover:border-blue-600/40 transition-colors">
                 <div className="flex justify-center mb-4">
-                  <img src={v.img} alt={v.title} className="w-10 h-10 object-contain" />
+                  <img src={v.img} alt={v.title} className="w-30 h-30 object-contain" />
                 </div>
                 <h3 className="font-['Playfair_Display',serif] text-lg text-blue-300 mb-2">{v.title}</h3>
                 <p className="text-gray-500 text-sm">{v.desc}</p>

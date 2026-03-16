@@ -1,22 +1,22 @@
 import { useState } from "react";
 
 const galleryItems = [
-  { id: 1, img: "/gallery/beef-tenderloin.jpg", title: "Beef Tenderloin", category: "Food" },
-  { id: 2, img: "/gallery/dining-hall.jpg", title: "Main Dining Hall", category: "Interior" },
-  { id: 3, img: "/gallery/desserts.jpg", title: "Signature Desserts", category: "Food" },
-  { id: 4, img: "/gallery/wine-cellar.jpg", title: "Wine Cellar", category: "Interior" },
-  { id: 5, img: "/gallery/table-setup.jpg", title: "Table Setup", category: "Interior" },
-  { id: 6, img: "/gallery/seafood-platter.jpg", title: "Seafood Platter", category: "Food" },
-  { id: 7, img: "/gallery/celebrations.jpg", title: "Special Celebrations", category: "Events" },
-  { id: 8, img: "/gallery/open-kitchen.jpg", title: "Open Kitchen", category: "Interior" },
-  { id: 9, img: "/gallery/garden-terrace.jpg", title: "Garden Terrace", category: "Interior" },
-  { id: 10, img: "/gallery/fine-dining.jpg", title: "Fine Dining Setup", category: "Events" },
-  { id: 11, img: "/gallery/chef-at-work.jpg", title: "Chef at Work", category: "Events" },
-  { id: 12, img: "/gallery/birthday.jpg", title: "Birthday Celebration", category: "Events" },
-  { id: 13, img: "/gallery/fresh-salads.jpg", title: "Fresh Salads", category: "Food" },
-  { id: 14, img: "/gallery/night-ambiance.jpg", title: "Night Ambiance", category: "Interior" },
-  { id: 15, img: "/gallery/chefs-special.jpg", title: "Chef's Special", category: "Food" },
-  { id: 16, img: "/gallery/live-music.jpg", title: "Live Music Evening", category: "Events" },
+  { id: 1, img: "Beef Tenderloin.jpg", title: "Beef Tenderloin", category: "Food" },
+  { id: 2, img: "Dining Chair.jpg", title: "Main Dining Hall", category: "Interior" },
+  { id: 3, img: "Signature Desserts.jpg", title: "Signature Desserts", category: "Food" },
+  { id: 4, img: "Wine.jpg", title: "Wine Cellar", category: "Interior" },
+  { id: 5, img: "Table Setting.jpg", title: "Table Setup", category: "Interior" },
+  { id: 6, img: "Seafood Platter.jpg", title: "Seafood Platter", category: "Food" },
+  { id: 7, img: "Event.jpg", title: "Special Celebrations", category: "Events" },
+  { id: 8, img: "Kitchen.jpg", title: "Open Kitchen", category: "Interior" },
+  { id: 9, img: "Garden Terrace.jpg", title: "Garden Terrace", category: "Interior" },
+  { id: 10, img: "Fine Dining Setup.jpg", title: "Fine Dining Setup", category: "Events" },
+  { id: 11, img: "Sous Chef.jpg", title: "Chef at Work", category: "Events" },
+  { id: 12, img: "Birthday Celebration.jpg", title: "Birthday Celebration", category: "Events" },
+  { id: 13, img: "Fresh Salads.jpg", title: "Fresh Salads", category: "Food" },
+  { id: 14, img: "Ambiance.jpg", title: "Night Ambiance", category: "Interior" },
+  { id: 15, img: "Beef Tenderloin.jpg", title: "Chef's Special", category: "Food" },
+  { id: 16, img: "Music.jpg", title: "Live Music Evening", category: "Events" },
 ];
 
 const cats = ["All", "Food", "Interior", "Events"];
@@ -40,11 +40,10 @@ export default function GalleryPage() {
         <div className="flex gap-2 justify-center mb-10">
           {cats.map((cat) => (
             <button key={cat} onClick={() => setActive(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-                active === cat
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${active === cat
                   ? "bg-blue-600 text-white"
                   : "bg-[#050d1f] text-gray-400 border border-blue-900/20 hover:border-blue-600/40 hover:text-blue-300"
-              }`}>
+                }`}>
               {cat}
             </button>
           ))}

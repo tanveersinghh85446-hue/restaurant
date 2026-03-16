@@ -3,18 +3,18 @@ import { useState } from "react";
 const timeSlots = ["12:00 PM","12:30 PM","1:00 PM","1:30 PM","6:00 PM","6:30 PM","7:00 PM","7:30 PM","8:00 PM","8:30 PM","9:00 PM"];
 
 const galleryImages = [
-  { src: "/gallery/dining-chair.jpg", alt: "Dining Chair" },
-  { src: "/gallery/table-setting.jpg", alt: "Table Setting" },
-  { src: "/gallery/candles.jpg", alt: "Candles" },
-  { src: "/gallery/flowers.jpg", alt: "Flowers" },
-  { src: "/gallery/champagne.jpg", alt: "Champagne" },
-  { src: "/gallery/music.jpg", alt: "Music" },
-  { src: "/gallery/wine.jpg", alt: "Wine" },
-  { src: "/gallery/herbs.jpg", alt: "Herbs" },
-  { src: "/gallery/ambiance.jpg", alt: "Ambiance" },
-  { src: "/gallery/event.jpg", alt: "Event" },
-  { src: "/gallery/lights.jpg", alt: "Lights" },
-  { src: "/gallery/cake.jpg", alt: "Cake" },
+  { src: "Dining Chair.jpg", alt: "Dining Chair" },
+  { src: "Table Setting.jpg", alt: "Table Setting" },
+  { src: "Candles.jpg", alt: "Candles" },
+  { src: "Flowers.jpg", alt: "Flowers" },
+  { src: "Champagne.jpg", alt: "Champagne" },
+  { src: "Music.jpg", alt: "Music" },
+  { src: "Wine.jpg", alt: "Wine" },
+  { src: "Herbs.jpg", alt: "Herbs" },
+  { src: "Ambiance.jpg", alt: "Ambiance" },
+  { src: "Event.jpg", alt: "Event" },
+  { src: "Lights.jpg", alt: "Lights" },
+  { src: "Cake.jpg", alt: "Cake" },
 ];
 
 export default function TableReservationPage() {
@@ -42,7 +42,7 @@ export default function TableReservationPage() {
             {submitted ? (
               <div className="text-center py-16">
                 <div className="flex justify-center mb-4">
-                  <img src="/icons/confirmed.png" alt="Confirmed" className="w-16 h-16 object-contain" />
+                  <img src="check mark.jpg" alt="Confirmed" className="w-16 h-16 object-contain" />
                 </div>
                 <h2 className="font-['Playfair_Display',serif] text-3xl text-blue-400 mb-3">Reservation Confirmed!</h2>
                 <p className="text-gray-400 mb-2">We look forward to welcoming you, <strong className="text-white">{form.name}</strong>.</p>

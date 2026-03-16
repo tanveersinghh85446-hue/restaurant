@@ -31,18 +31,13 @@ export default function OrderOnlinePage({ cart, removeFromCart, updateQty }) {
           {/* Cart */}
           <div className="lg:col-span-1">
             <div className="bg-[#050d1f] border border-blue-900/30 rounded-2xl p-6 sticky top-28">
-              <h2 className="font-['Playfair_Display',serif] text-2xl text-blue-300 mb-6 flex items-center gap-2">
-                <img src="/icons/cart.png" alt="Cart" className="w-6 h-6 object-contain" />
-                Your Cart
-              </h2>
-
               {cart.length === 0 ? (
-                <div className="text-center py-12 text-gray-600">
+                <div className="text-center py-12">
                   <div className="flex justify-center mb-4">
-                    <img src="/icons/empty-plate.png" alt="Empty" className="w-12 h-12 object-contain opacity-50" />
+                    <img src="Empty-plate.jpg" alt="Empty" className="w-20 h-20 object-contain opacity-50" />
                   </div>
                   <p>Your cart is empty</p>
-                  <p className="text-xs mt-1 text-gray-700">Add items from the menu</p>
+                  <p className="text-xs mt-1 text-gray-400">Add items from the menu</p>
                 </div>
               ) : (
                 <div className="space-y-4">
