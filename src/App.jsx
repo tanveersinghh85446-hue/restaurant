@@ -4,7 +4,7 @@ import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
 import MenuPage from "./Pages/Menupage";
 import OrderOnlinePage from "./Pages/Orderonlinepage";
-import TableReservationPage from "./Pages/TableReservationPage";
+import TableReservationPage from "./Pages/TablereservationPage";
 import AboutUsPage from "./Pages/AboutUsPage";
 import ReviewsPage from "./Pages/ReviewsPage";
 import ContactPage from "./Pages/ContactPage";
