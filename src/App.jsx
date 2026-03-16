@@ -4,11 +4,11 @@ import Footer from "./Components/Footer";
 import HomePage from "./Pages/HomePage";
 import MenuPage from "./Pages/Menupage";
 import OrderOnlinePage from "./Pages/Orderonlinepage";
-import TableReservationPage from "./pages/TableReservationPage";
-import AboutUsPage from "./pages/AboutUsPage";
-import ReviewsPage from "./pages/ReviewsPage";
-import ContactPage from "./pages/ContactPage";
-import GalleryPage from "./pages/GalleryPage";
+import TableReservationPage from "./Pages/TableReservationPage";
+import AboutUsPage from "./Pages/AboutUsPage";
+import ReviewsPage from "./Pages/ReviewsPage";
+import ContactPage from "./Pages/ContactPage";
+import GalleryPage from "./Pages/GalleryPage";
 
 export default function App() {
   const [activePage, setActivePage] = useState("home");
