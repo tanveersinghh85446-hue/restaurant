@@ -1,14 +1,14 @@
 import { useState } from "react";
-import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
-import HomePage from "./Pages/HomePage";
-import MenuPage from "./Pages/Menupage";
-import OrderOnlinePage from "./Pages/Orderonlinepage";
+import Navbar from "./Components/Navbar"
+import Footer from "./Components/Footer"
+import HomePage from "./Pages/HomePage"
+import Menupage from "./Pages/Menupage"
+import Orderonlinepage from "./Pages/Orderonlinepage"
 import Tablereservationpage from "./Pages/Tablereservationpage"
-import AboutUsPage from "./Pages/AboutUsPage";
-import ReviewsPage from "./Pages/ReviewsPage";
-import ContactPage from "./Pages/ContactPage";
-import GalleryPage from "./Pages/GalleryPage";
+import AboutUsPage from "./Pages/AboutUsPage"
+import Reviewspage from "./Pages/Reviewspage"
+import ContactPage from "./Pages/ContactPage"
+import GalleryPage from "./Pages/GalleryPage"
 
 export default function App() {
   const [activePage, setActivePage] = useState("home");
@@ -30,11 +30,11 @@ export default function App() {
 
   const pages = {
     home: <HomePage setActivePage={setActivePage} addToCart={addToCart} />,
-    menu: <MenuPage addToCart={addToCart} />,
-    order: <OrderOnlinePage cart={cart} removeFromCart={removeFromCart} updateQty={updateQty} />,
+    menu: <Menupage addToCart={addToCart} />,
+    order: <Orderonlinepage cart={cart} removeFromCart={removeFromCart} updateQty={updateQty} />,
     reservation: <Tablereservationpage />,
     about: <AboutUsPage />,
-    reviews: <ReviewsPage />,
+    reviews: <Reviewspage />,
     contact: <ContactPage />,
     gallery: <GalleryPage />,
   };
