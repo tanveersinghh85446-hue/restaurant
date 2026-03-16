@@ -125,7 +125,7 @@ export default function TableReservationPage() {
             {/* Hours */}
             <div className="bg-[#050d1f] border border-blue-900/30 rounded-xl p-5">
               <h3 className="font-['Playfair_Display',serif] text-lg text-blue-300 mb-4 flex items-center gap-2">
-                <img src="/icons/clock.png" alt="Hours" className="w-5 h-5 object-contain" />
+                <img src="Hours.jpg" alt="Hours" className="w-5 h-5 object-contain" />
                 Opening Hours
               </h3>
               <ul className="space-y-2 text-sm">
